@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lyrics Box</title>
+  </head>
+  <body>
+    <div class="search__container">
+      <div class="container">
+        <header>
+          <h1 class="search__title">Lyrics Box</h1>
+        </header>
+        <form id="form-results" autocomplete="off">
+          <div class="d-flex flex-direction-column search__input__container">
+            <input
+              id="search-input"
+              type="text"
+              name="search"
+              placeholder="‘Type Song or Artist Name‘ 🔎 "
+              required
+              class="font-weight-light"
+            />
+          </div>
+          <button id="search-button" type="button" class="btn button">
+            SEARCH
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="search-results-container" class="d-none results__container">
+      <div class="container p-3 mb-4">
+        <div id="search-results-loader" class="loader text-center">
+          <p class="m-0">Loading...</p>
+          <div class="spinner-grow text-danger" role="status"></div>
+        </div>
+
+        <div id="search-results-list" class="container-fluid lyrics-list"></div>
+      </div>
+    </div>
+
+    <div
+      id="lyrics-container"
+      class="container lyric mb-4 d-none lyrics__container"
+    >
+      <div id="lyrics-loader" class="loader text-center">
+        <p class="m-0">Loading...</p>
+        <div class="spinner-grow text-danger" role="status"></div>
+      </div>
+      <div id="lyrics-results" class="lyrics__item"></div>
+    </div>
+  </body>
+
+  <script src="main.js"></script>
+</html>
